@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --swiper-theme-color: "#5550DC" !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+::after {
+  --swiper-navigation-size: 30px;
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: 10px;
+  --swiper-navigation-color: var(--swiper-theme-color);
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+/* prevent dragging of ghost image */
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+/* end */
+
+.smooth-transform {
+  transition: all 0.2s ease;
+}
+
+.custom-connect-wallet-btn-dark div button,
+.custom-connect-wallet-btn-dark div button > div {
+  background-image: linear-gradient(0deg, #252a37, #252a37) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 6px;
+  height: 40px;
+}
+
+/* .custom-connect-wallet-btn-dark div button > div {
+  padding-top: 10px !important;
+} */
+
+.custom-connect-wallet-btn-dark div button > div:last-child {
+  padding-top: 8px !important;
+}
+
+@media only screen and (max-width: 768px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  .custom-connect-wallet-btn-dark div button > div {
+    padding-top: 0px !important;
+  }
+}
+
+/* hide arrow from input number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+/* end */
+.buttonLinear {
+  background-color: rgba(255, 255, 255) !important;
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.15)) !important;
+}
+
+.marquee {
+  width: 100%; /* Adjust as needed */
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  animation: marquee 10s linear infinite; /* Adjust animation duration as needed */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: none;
+  padding: 0.4em 0.5em;
+}
+
+.inputDarmode input[type="date"] {
+  color-scheme: dark;
+}

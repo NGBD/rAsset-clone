@@ -1,0 +1,148 @@
+/* style for table */
+.table-style {
+  width: 100%;
+}
+
+.table-style table {
+  width: 100%;
+  border-radius: 6px;
+  border-collapse: separate;
+  border-spacing: 0 0px;
+  font-size: 14px;
+  background-color: white;
+}
+
+.table-style table thead tr:first-child {
+  display: none;
+  visibility: hidden;
+}
+
+.table-style table td {
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.table-style table thead td {
+  padding-bottom: 12px;
+  padding-top: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #5550dc;
+}
+
+.table-style table tbody tr td {
+  font-size: 16px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.table-style table tbody tr:hover td {
+  background-color: #eeeeee;
+  transition: all 0.2s ease;
+}
+
+.table-style table td:first-child {
+  text-align: left;
+  border-radius: 6px 0 0 0;
+}
+.table-style table td:last-child {
+  border-radius: 0 6px 0 0;
+}
+.table-style table tr:last-child {
+  border: none;
+}
+
+@media only screen and (max-width: 768px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  .table-style table {
+    border: 0;
+  }
+  .table-style table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  .table-style table tr {
+    display: block;
+    background-color: #f6f5fa05;
+    font-weight: 200;
+    border-bottom: 1px solid #e0e1e3;
+  }
+
+  .table-style table tbody tr:hover td {
+    background-color: #f6f5fa08;
+    transition: all 0.2s ease;
+  }
+
+  .table-style table tr:last-child {
+    border-bottom: none;
+  }
+
+  .table-style table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 0px;
+  }
+
+  .table-style table tbody tr:last-child td:last-child {
+    border-bottom-left-radius: 8px;
+  }
+
+  .table-style table tbody tr td {
+    border-bottom: 0px solid transparent;
+  }
+  .table-style table tbody tr td:last-child {
+    border-bottom: none;
+  }
+
+  .table-style table td {
+    text-align: right;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .table-style table td::before {
+    content: attr(data-label);
+    float: left;
+    color: #827d9d;
+    font-size: 18px;
+    text-transform: none;
+    font-weight: normal;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+
+  .table-style table td:first-child {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .event-table-style table td:first-child::before {
+    display: none;
+  }
+  .leaderboard-table-style table td:first-child::before {
+    display: none;
+  }
+  .activity-table-style tr td:nth-child(3) {
+    display: none;
+  }
+}
+
+/* end css for table */
